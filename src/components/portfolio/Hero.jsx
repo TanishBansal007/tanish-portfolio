@@ -4,7 +4,7 @@ import { Download, ChevronDown } from 'lucide-react';
 const RESUME_URL = "/files/Tanish_Bansal_Resume.pdf";
 const NIGHT_GUITAR = '/images/Agentforce-World-Tour-Photo-1.jpeg';
 
-const TAGLINES = ['Salesforce Developer', 'Guitarist & Singer', 'Salesforce Administrator', 'Trailblazer', 'Business Analyst'];
+const TAGLINES = ['Salesforce Developer', 'Guitarist & Singer', 'Salesforce Administrator', 'Trailblazer', 'Software Engineer'];
 
 export default function Hero() {
   const [tagIdx, setTagIdx] = useState(0);
@@ -20,7 +20,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen grid grid-cols-1 md:grid-cols-12 overflow-hidden">
       {/* Left — Artist */}
       <div className="relative md:col-span-5 bg-[#080808] min-h-[50vh] md:min-h-screen flex items-end overflow-hidden">
-        <img src={NIGHT_GUITAR} alt="Tanish playing guitar at night" className="absolute inset-0 w-full h-full object-cover opacity-50" loading="eager" />
+        <img src={NIGHT_GUITAR} alt="Tanish playing guitar at night" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/60 to-transparent" />
         <div className="relative z-10 p-8 md:p-12 pb-20 md:pb-32">
           <p className="font-mono text-xs text-[#F59E0B] tracking-widest uppercase mb-2">The Artist</p>

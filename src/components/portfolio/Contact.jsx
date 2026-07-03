@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Download, MapPin } from 'lucide-react';
 
-const RESUME_URL = '/files/Tanish_Bansal_Resume.pdf';
+const RESUME_URL = '/files/TanishBansal_Resume.pdf';
 
 export default function Contact() {
   return (
@@ -35,7 +35,7 @@ export default function Contact() {
             <a href={RESUME_URL} download className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#1877F2] text-white font-medium hover:bg-[#005FB2] transition-all hover:scale-105">
               <Download size={18} /> Download Resume
             </a>
-            <a href="https://www.linkedin.com/in/tanishbansal" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:border-[#1877F2] hover:text-[#1877F2] transition-all">
+            <a href="https://www.linkedin.com/in/tanish-bansal-461a6b178" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:border-[#1877F2] hover:text-[#1877F2] transition-all">
               <Linkedin size={18} /> View on LinkedIn
             </a>
           </div>
