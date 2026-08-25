@@ -1,301 +1,358 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Building2, MapPin } from 'lucide-react';
+
 import SectionLabel from './SectionLabel';
 
 const JOBS = [
   {
-    role: 'Salesforce Administrator | Salesforce Developer | Revenue Systems Analyst | Software Engineer',
+    role: 'Salesforce Consultant / Administrator',
     company: 'Cloud Maven Inc.',
-    period: 'Jan 2025 -- Apr 2026',
+    period: 'Jan 2025 — Present',
     location: 'Newark, NJ',
     tags: [
       'Salesforce Admin',
-      'Apex',
-      'LWC',
       'Flow',
-      'Reports & Dashboards',
-      'UAT',
-      'Revenue Operations',
+      'Apex & LWC',
+      'REST APIs',
+      'Commercial Lending',
     ],
     bullets: [
-      'Supported and enhanced a Salesforce-native lending and revenue operations platform, working across Salesforce administration, development, CRM configuration, reporting, automation, integrations, and production support.',
-      'Configured objects, fields, page layouts, record types, validation rules, approval processes, Flows, profiles, permission sets, reports, dashboards, and access controls to improve process efficiency and data governance.',
-      'Developed and supported Apex classes, triggers, queueable jobs, Lightning Web Components, SOQL logic, REST/SOAP integrations, and platform-event automation while maintaining strong test coverage and release quality.',
-      'Built dashboards and reporting views for pipeline visibility, operational KPIs, data quality, user adoption, loan workflow tracking, and executive-level insights.',
-      'Led UAT cycles, release validation, defect tracking, documentation, and post-production support across Agile sprint releases.',
-      'Supported business analysis activities including requirements gathering, user stories, process mapping, test cases, acceptance criteria, and stakeholder communication.',
-      'Improved manual processing efficiency by 25% through Salesforce automation, workflow optimization, and cleaner CRM processes.',
+      'Supported a Salesforce-based Lending Manager platform across customer onboarding, underwriting, loan servicing, Promise-to-Pay, refinancing, disbursement, and repayment allocation.',
+      'Designed record-triggered, screen, scheduled, and autolaunched Flows that streamlined lending workflows and reduced manual processing effort by approximately 25%.',
+      'Developed and enhanced Apex, Lightning Web Components, and SOQL-based functionality for commercial lending, loan amortization, payment calculations, and repayment allocation.',
+      'Supported eOriginal document vaulting integrations and NACHA/ACH payment workflows using REST APIs, Postman, JSON, Apex, LWC, and Salesforce automation.',
+      'Managed security, data quality, reporting, UAT, releases, production support, and stakeholder communication across the Salesforce delivery lifecycle.',
     ],
   },
+
   {
-    role: 'Salesforce Administrator | Salesforce Developer | CRM/Sales Operations Analyst | Software Engineer',
-    company: 'SilverXis Inc.',
-    period: 'Aug 2024 -- Jan 2025',
-    location: 'New Jersey',
+    role: 'Salesforce Analyst / Senior Salesforce Administrator',
+    company: 'Tapestry',
+    period: 'Mar 2023 — Dec 2024',
+    location: 'Iselin, NJ',
     tags: [
-      'Salesforce CRM',
-      'Data Loader',
+      'Salesforce Admin',
       'Data Migration',
-      'CRM Analytics',
-      'Sales Operations',
-      'Reports',
-      'User Support',
+      'Data Governance',
+      'Reports & Dashboards',
+      'Business Analysis',
     ],
     bullets: [
-      'Supported Salesforce CRM configuration, reporting, data quality, and business process improvements for real estate and home services operations.',
-      'Configured Salesforce workflows, Flows, validation rules, Visualforce pages, page layouts, record types, custom objects, permissions, and field-level security to improve system usability and business process consistency.',
-      'Executed Data Loader migration, field mapping, deduplication, cleansing, import/export validation, and integration testing across 10,000+ records with zero data loss.',
-      'Built reports, dashboards, custom report views, and operational KPI tracking for pipeline visibility, user activity, task completion, data quality, and business performance.',
-      'Supported requirements gathering, process documentation, QA validation, user support, issue resolution, and adoption improvements.',
-      'Collaborated with technical and business teams to troubleshoot Salesforce issues, validate configuration changes, and support release readiness.',
+      'Configured and administered Salesforce for real estate operations across lead, customer, property, activity, reporting, and data-management processes.',
+      'Led an end-to-end migration of more than 10,000 records using Data Loader, Excel, and SOQL, including cleansing, transformation, mapping, relationship validation, and reconciliation.',
+      'Implemented Matching Rules, Duplicate Rules, validation controls, standardized values, and data-quality reporting, completing the migration with zero reported data loss.',
+      'Built operational reports and dashboards, administered security and access, coordinated UAT, and delivered demonstrations and user training.',
     ],
   },
+
   {
-    role: 'Salesforce Administrator | Salesforce Developer | Software Engineer',
+    role: 'Senior Salesforce Administrator',
     company: 'Business Thrust Techsoft Pvt. Ltd.',
-    period: 'Nov 2021 -- May 2022',
+    period: 'Jul 2021 — Aug 2022',
     location: 'India',
     tags: [
       'Salesforce Configuration',
-      'Visualforce',
-      'Apex',
-      'Validation Rules',
-      'CRM',
-      'Documentation',
+      'Flow',
+      'Security',
+      'Data Quality',
       'UAT',
     ],
     bullets: [
-      'Delivered Salesforce CRM configuration and development support across business process automation, reporting, testing, and documentation.',
-      'Configured custom objects, fields, record types, page layouts, workflows, validation rules, Visualforce pages, reports, and dashboards.',
-      'Supported Apex-assisted automation, CRM customization, testing, documentation, and troubleshooting for internal and client-facing Salesforce use cases.',
-      'Partnered with business and technical teams to translate requirements into Salesforce configuration and process improvements.',
-      'Created documentation, supported UAT, validated business rules, and improved delivery consistency across releases.',
-      'Contributed to a 30% improvement in delivery efficiency through better configuration practices, documentation, and testing support.',
+      'Translated business requirements, process flows, data definitions, and reporting needs into scalable Salesforce configuration and workflow improvements.',
+      'Built and maintained custom objects, fields, relationships, Flows, validation rules, approval processes, reports, dashboards, and security configurations.',
+      'Supported data profiling, cleansing, deduplication, imports, reconciliation, and KPI reporting using Salesforce, SOQL, SQL, and Excel.',
+      'Coordinated functional testing, regression testing, UAT, production support, and user guidance, contributing to approximately 30% improvement in delivery efficiency.',
     ],
   },
+
   {
-    role: 'Junior Software Engineer',
+    role: 'Salesforce Administrator',
     company: 'Anviam Solutions Pvt. Ltd.',
-    period: 'Jan 2021 -- Aug 2021',
+    period: 'Jun 2019 — Jul 2021',
     location: 'India',
     tags: [
-      'JavaScript',
-      'HTML',
-      'CSS',
-      'SQL',
-      'Debugging',
-      'Agile',
-      'Documentation',
+      'Salesforce',
+      'Apex',
+      'Visualforce',
+      'SOQL',
+      'Agile Delivery',
     ],
     bullets: [
-      'Contributed to development and enhancement of enterprise web applications, supporting frontend, backend, database, debugging, and Agile delivery activities.',
-      'Developed and enhanced application features using HTML, CSS, JavaScript, and backend/database logic.',
-      'Assisted with debugging, performance improvements, database queries, and technical documentation.',
-      'Collaborated with cross-functional teams on requirements understanding, testing, issue resolution, and sprint delivery.',
-      'Improved code quality, maintainability, and documentation while gaining hands-on experience across the software development lifecycle.',
+      'Configured and supported Salesforce objects, fields, relationships, record types, layouts, validation rules, approvals, security, reports, dashboards, and automation.',
+      'Developed targeted enhancements using Apex, triggers, SOQL, Visualforce, JavaScript, and REST/SOAP services.',
+      'Worked with administrators, developers, QA, analysts, and stakeholders to refine requirements and deliver enhancements through Agile sprint cycles.',
+      'Troubleshot production issues using debug logs, SOQL, automation analysis, permission reviews, and integration responses while supporting testing and deployments.',
     ],
   },
 ];
 
 const CODE_SNIPPETS = [
-  `// Apex -- Queueable automation pattern
-public class LoanWorkflowQueueable implements Queueable {
-  private Id loanId;
+  {
+    label: 'lending-automation.apex',
+    code: `// Representative lending automation pattern
 
-  public LoanWorkflowQueueable(Id loanId) {
-    this.loanId = loanId;
-  }
-
-  public void execute(QueueableContext context) {
+public with sharing class LoanService {
+  public static void processLoan(Id loanId) {
     Loan__c loan = [
-      SELECT Id, Status__c, OwnerId
+      SELECT Id, Status__c
       FROM Loan__c
       WHERE Id = :loanId
       LIMIT 1
     ];
 
     if (loan.Status__c == 'Submitted') {
-      loan.Status__c = 'Under Review';
+      loan.Status__c = 'In Review';
       update loan;
     }
   }
 }`,
-  `// SOQL -- CRM reporting and pipeline visibility
-SELECT Id, Name, Stage__c, Amount__c,
-  Owner.Name, CreatedDate
-FROM Opportunity__c
-WHERE CreatedDate = THIS_QUARTER
-  AND Stage__c IN ('New', 'In Review', 'Closed Won')
-ORDER BY Amount__c DESC
+  },
+
+  {
+    label: 'data-quality.soql',
+    code: `// Representative data-quality review
+
+SELECT Id, Name, OwnerId,
+       LastModifiedDate
+FROM Account
+WHERE Name != null
+ORDER BY LastModifiedDate DESC
 LIMIT 200`,
-  `// Apex -- Requirement validation helper
-public with sharing class RequirementService {
-  public static Boolean hasRequiredDocs(Id recordId) {
-    List<Document__c> docs = [
+  },
+
+  {
+    label: 'access-validation.apex',
+    code: `// Representative validation helper
+
+public with sharing class ValidationService {
+  public static Boolean isReady(Id recordId) {
+    List<Task> tasks = [
       SELECT Id
-      FROM Document__c
-      WHERE Parent_Record__c = :recordId
-      AND Status__c = 'Received'
+      FROM Task
+      WHERE WhatId = :recordId
+      AND Status != 'Completed'
     ];
 
-    return !docs.isEmpty();
+    return tasks.isEmpty();
   }
 }`,
-  `// LWC -- User action handler
-import { LightningElement, api } from 'lwc';
-import runAutomation from '@salesforce/apex/AutomationController.runAutomation';
+  },
 
-export default class WorkflowActionPanel extends LightningElement {
+  {
+    label: 'salesforce-component.js',
+    code: `// Representative Salesforce UI action
+
+import { LightningElement, api } from 'lwc';
+
+export default class RecordAction extends LightningElement {
   @api recordId;
 
-  async handleRunAutomation() {
-    await runAutomation({ recordId: this.recordId });
-
+  handleAction() {
     this.dispatchEvent(
-      new CustomEvent('success', {
-        detail: 'Automation completed successfully'
+      new CustomEvent('recordaction', {
+        detail: { recordId: this.recordId }
       })
     );
   }
 }`,
+  },
 ];
 
 export default function Experience() {
   const [active, setActive] = useState(0);
   const [expanded, setExpanded] = useState(0);
 
-  return (
-    <section id="experience" className="grid grid-cols-1 md:grid-cols-12">
-      {/* Left -- Code terminal */}
-      <div className="md:col-span-5 bg-[#080808] p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[400px] md:min-h-screen">
-        <SectionLabel number="02" title="Experience" side="dark" />
+  const handleJobClick = (index) => {
+    setActive(index);
+    setExpanded(expanded === index ? -1 : index);
+  };
 
-        <div className="rounded-xl bg-[#0d0d0d] border border-white/10 overflow-hidden shadow-2xl">
+  return (
+    <section
+      id="experience"
+      className="grid grid-cols-1 md:grid-cols-12"
+    >
+      {/* Left — Technical / Code Side */}
+      <div className="md:col-span-5 bg-[#080808] p-8 md:p-12 lg:p-16 flex flex-col justify-center min-h-[420px] md:min-h-screen">
+        <SectionLabel
+          number="02"
+          title="Experience"
+          side="dark"
+        />
+
+        <h2 className="font-display font-bold text-3xl md:text-4xl text-white mb-3">
+          Built beyond configuration.
+        </h2>
+
+        <p className="text-white/45 text-sm leading-relaxed mb-8 max-w-md">
+          Administration, automation, development, data, and integrations —
+          working together to solve real business problems.
+        </p>
+
+        <motion.div
+          key={active}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="rounded-xl bg-[#0d0d0d] border border-white/10 overflow-hidden shadow-2xl"
+        >
+          {/* Terminal Header */}
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#111]">
             <div className="w-3 h-3 rounded-full bg-[#F59E0B]" />
             <div className="w-3 h-3 rounded-full bg-white/20" />
             <div className="w-3 h-3 rounded-full bg-[#1877F2]" />
-            <span className="ml-3 font-mono text-xs text-white/40">
-              tanish@salesforce:~
+
+            <span className="ml-3 font-mono text-[10px] md:text-xs text-white/40">
+              {CODE_SNIPPETS[active].label}
             </span>
           </div>
 
+          {/* Code */}
           <pre className="p-4 md:p-5 font-mono text-[10px] md:text-xs text-[#E8E8E8] leading-relaxed overflow-x-auto whitespace-pre-wrap">
-            <code>{CODE_SNIPPETS[active]}</code>
+            <code>
+              {CODE_SNIPPETS[active].code}
+            </code>
           </pre>
-        </div>
+        </motion.div>
 
-        <p className="font-mono text-xs text-white/30 mt-4">
-          Representative Salesforce snippet inspired by my work across CRM automation,
-          reporting, integrations, and platform support.
+        <p className="font-mono text-[10px] md:text-xs text-white/30 mt-4 leading-relaxed">
+          Representative implementation patterns reflecting the Salesforce
+          administration and development work across my experience.
         </p>
       </div>
 
-      {/* Right -- Timeline */}
+      {/* Right — Professional Timeline */}
       <div className="md:col-span-7 bg-[#FAFAFA] circuit-bg p-8 md:p-12 lg:p-16">
-        <SectionLabel number="02" title="Experience" side="light" />
+        <SectionLabel
+          number="02"
+          title="Experience"
+          side="light"
+        />
 
         <h2 className="font-display font-bold text-3xl md:text-4xl text-[#080808] mb-3">
-          Salesforce Certified Administrator. Developer. CRM Systems Professional.
+          Salesforce Consultant.
+          <br />
+          Administrator. Developer.
         </h2>
 
-        <p className="text-sm md:text-base text-[#080808]/65 leading-relaxed mb-8 max-w-3xl">
-          3+ years of experience across Salesforce Administration, Salesforce Development,
-          CRM configuration, business analysis, reporting, automation, UAT, data quality,
-          and sales/revenue operations support.
+        <p className="text-sm md:text-base text-[#080808]/60 leading-relaxed mb-10 max-w-3xl">
+          Around 7 years of experience delivering Salesforce solutions across
+          administration, automation, development, integrations, data
+          management, business analysis, testing, and production support.
         </p>
 
+        {/* Timeline */}
         <div className="relative">
           <div className="absolute left-3 top-2 bottom-2 w-px bg-[#080808]/15" />
 
           {JOBS.map((job, i) => (
             <motion.div
-              key={i}
+              key={`${job.company}-${job.period}`}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              transition={{
+                duration: 0.4,
+                delay: i * 0.08,
+              }}
               className="relative pl-10 pb-8 last:pb-0"
             >
+              {/* Timeline Button */}
               <button
-                onClick={() => {
-                  setActive(i);
-                  setExpanded(expanded === i ? -1 : i);
-                }}
+                onClick={() => handleJobClick(i)}
                 className="absolute left-0 top-1 w-6 h-6 rounded-full border-2 border-[#1877F2] bg-[#FAFAFA] flex items-center justify-center hover:bg-[#1877F2] transition-colors group"
                 aria-label={`View ${job.company} experience`}
               >
                 <div
-                  className={`w-2 h-2 rounded-full ${
-                    active === i ? 'bg-[#1877F2]' : 'bg-transparent'
-                  } group-hover:bg-white transition-colors`}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    active === i
+                      ? 'bg-[#1877F2]'
+                      : 'bg-transparent'
+                  } group-hover:bg-white`}
                 />
               </button>
 
+              {/* Experience Card */}
               <div
-                className={`rounded-xl p-5 transition-all cursor-pointer ${
+                className={`rounded-xl p-5 md:p-6 transition-all cursor-pointer ${
                   active === i
                     ? 'bg-white shadow-lg border border-[#1877F2]/20'
                     : 'bg-white/50 border border-transparent hover:bg-white/80'
                 }`}
-                onClick={() => {
-                  setActive(i);
-                  setExpanded(expanded === i ? -1 : i);
-                }}
+                onClick={() => handleJobClick(i)}
               >
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <span className="font-mono text-xs text-[#1877F2]">
-                    {job.period}
-                  </span>
-                </div>
+                {/* Date */}
+                <span className="font-mono text-xs text-[#1877F2]">
+                  {job.period}
+                </span>
 
-                <h3 className="font-display font-semibold text-lg text-[#080808]">
+                {/* Role */}
+                <h3 className="font-display font-semibold text-lg md:text-xl text-[#080808] mt-1 leading-tight">
                   {job.role}
                 </h3>
 
-                <div className="flex flex-wrap items-center gap-3 mt-1 text-sm text-[#080808]/60">
-                  <span className="flex items-center gap-1">
-                    <Building2 size={13} /> {job.company}
+                {/* Company / Location */}
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-2 text-sm text-[#080808]/55">
+                  <span className="flex items-center gap-1.5">
+                    <Building2 size={13} />
+                    {job.company}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <MapPin size={13} /> {job.location}
+
+                  <span className="flex items-center gap-1.5">
+                    <MapPin size={13} />
+                    {job.location}
                   </span>
                 </div>
 
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {job.tags.map((tag, tagIndex) => (
+                  {job.tags.map((tag) => (
                     <span
-                      key={tagIndex}
-                      className="text-[11px] font-mono px-2 py-1 rounded-full bg-[#1877F2]/10 text-[#1877F2]"
+                      key={tag}
+                      className="text-[10px] md:text-[11px] font-mono px-2.5 py-1 rounded-full bg-[#1877F2]/10 text-[#1877F2]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
+                {/* Expanded Highlights */}
                 {expanded === i && (
                   <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    className="mt-4 space-y-2 overflow-hidden"
+                    initial={{
+                      opacity: 0,
+                      height: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      height: 'auto',
+                    }}
+                    className="mt-5 space-y-3 overflow-hidden"
                   >
-                    {job.bullets.map((b, j) => (
+                    {job.bullets.map((bullet, j) => (
                       <li
                         key={j}
-                        className="text-sm text-[#080808]/70 leading-relaxed flex gap-2"
+                        className="text-sm text-[#080808]/65 leading-relaxed flex gap-2.5"
                       >
-                        <span className="text-[#1877F2] mt-1">-</span>
-                        <span>{b}</span>
+                        <span className="text-[#1877F2] mt-0.5 shrink-0">
+                          ▸
+                        </span>
+
+                        <span>
+                          {bullet}
+                        </span>
                       </li>
                     ))}
                   </motion.ul>
                 )}
 
+                {/* Collapsed State */}
                 {expanded !== i && (
-                  <button className="mt-4 flex items-center gap-1 text-xs text-[#1877F2]">
-                    <ChevronDown size={12} /> {job.bullets.length} highlights
-                  </button>
+                  <div className="mt-4 flex items-center gap-1.5 text-xs text-[#1877F2]">
+                    <ChevronDown size={13} />
+                    View {job.bullets.length} highlights
+                  </div>
                 )}
               </div>
             </motion.div>

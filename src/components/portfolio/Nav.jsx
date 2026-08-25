@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
 
-const RESUME_URL = "/files/Tanish_Bansal_Resume.pdf";
+const RESUME_URL = "/files/Tanish_Bansal_Salesforce_Administrator.docx";
 
 const LINKS = [
   { label: 'About', id: 'about' },

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+
 import SectionLabel from './SectionLabel';
 
 const SNOW_GUITAR = '/images/Guitarist.jpeg';
@@ -6,11 +7,12 @@ const SUIT_PHOTO = '/images/Professional-Photo.jpeg';
 
 const CORE_STRENGTHS = [
   'Salesforce Administration',
-  'Apex & LWC',
+  'Reports & Dashboards',
   'Flow Automation',
-  'CRM Reporting',
+  'Apex & LWC',
+  'REST/SOAP Integrations',
+  'Data Migration & Governance',
   'Business Analysis',
-  'Sales/Revenue Operations',
 ];
 
 export default function About() {
@@ -33,35 +35,54 @@ export default function About() {
               className="w-full h-72 object-cover"
               loading="lazy"
             />
+
             <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 to-transparent" />
           </div>
 
           <p className="text-white/80 text-base leading-relaxed">
-            I build scalable CRM systems by day and play guitar under city lights by night.
-            Originally from India, with an MS from NYIT and now based in New Jersey, I bring
-            the same discipline to Salesforce automation, Apex logic, and business workflows
-            that I bring to learning a new melody — structured, focused, and always improving.
+            I build scalable Salesforce solutions by day and play guitar under
+            city lights by night. Originally from India, with an MS in Computer
+            and Information Sciences from NYIT, I bring the same discipline to
+            Salesforce delivery that I bring to music — understanding the
+            structure, solving the details, and continuously improving the
+            outcome.
           </p>
 
           <div className="mt-6 grid grid-cols-2 gap-3 max-w-sm">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="font-display text-2xl font-bold text-white">3+</p>
-              <p className="font-mono text-xs text-white/50 mt-1">Years Experience</p>
+              <p className="font-display text-2xl font-bold text-white">
+                7+
+              </p>
+              <p className="font-mono text-xs text-white/50 mt-1">
+                Years Experience
+              </p>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="font-display text-2xl font-bold text-white">ADM-201</p>
-              <p className="font-mono text-xs text-white/50 mt-1">Salesforce Certified</p>
+              <p className="font-display text-2xl font-bold text-white">
+                3x
+              </p>
+              <p className="font-mono text-xs text-white/50 mt-1">
+                Salesforce Certified
+              </p>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="font-display text-2xl font-bold text-white">25%</p>
-              <p className="font-mono text-xs text-white/50 mt-1">Manual Effort Reduced</p>
+              <p className="font-display text-2xl font-bold text-white">
+                25%
+              </p>
+              <p className="font-mono text-xs text-white/50 mt-1">
+                Manual Effort Reduced
+              </p>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="font-display text-2xl font-bold text-white">10K+</p>
-              <p className="font-mono text-xs text-white/50 mt-1">Records Migrated</p>
+              <p className="font-display text-2xl font-bold text-white">
+                10K+
+              </p>
+              <p className="font-mono text-xs text-white/50 mt-1">
+                Records Migrated
+              </p>
             </div>
           </div>
         </motion.div>
@@ -78,8 +99,9 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-[#080808] leading-[0.95] mb-6">
-            Salesforce builder.<br />
-            CRM problem solver.
+            Salesforce consultant.
+            <br />
+            Business problem solver.
           </h2>
 
           <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -92,21 +114,17 @@ export default function About() {
 
             <div className="flex-1">
               <p className="text-[#080808]/70 text-base leading-relaxed">
-                Salesforce Certified Administrator with 3+ years of experience across
-                Salesforce Administration, Salesforce Development, CRM systems, business
-                analysis, sales operations, and revenue operations. I help teams improve
-                automation, reporting, data quality, user adoption, and end-to-end CRM processes.
-                <br /><br />
-                My background combines hands-on Salesforce configuration with technical
-                development and business-facing delivery. I have worked with Flows, validation
-                rules, approval processes, record types, page layouts, profiles, permission sets,
-                reports, dashboards, Apex, Lightning Web Components, SOQL, REST/SOAP APIs,
-                Data Loader, UAT, documentation, and release support.
-                <br /><br />
-                At Cloud Maven, I supported a Salesforce-native lending platform covering the
-                full lifecycle from credit application intake through approval, disbursement,
-                repayment, and servicing workflows. I enjoy translating business needs into
-                scalable Salesforce solutions that are practical, clean, and easy for users to adopt.
+                Salesforce Certified professional with around 7 years of experience across
+                administration, consulting, development, business analysis, and CRM delivery.
+                I have worked across commercial lending, financial services, and real estate,
+                translating business requirements into scalable Salesforce solutions.
+                <br />
+                <br />
+                My experience spans Flow automation, security and access, data migration,
+                reporting, Apex, LWC, REST APIs, integrations, UAT, and production support.
+                I enjoy solving complex business problems, improving inefficient processes,
+                and building Salesforce solutions that are practical, reliable, and easy for
+                users to adopt.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-5">
@@ -125,9 +143,13 @@ export default function About() {
               </p>
 
               <p className="text-[#080808]/55 text-sm leading-relaxed mt-4">
-                Open to Salesforce Administrator, Salesforce Business Analyst, Salesforce
-                Developer, Salesforce Engineer, CRM Analyst, Sales Operations Analyst, and
-                Revenue Operations Analyst/Specialist roles.
+                Salesforce Certified Administrator · Platform Developer I ·
+                Platform App Builder
+              </p>
+
+              <p className="text-[#080808]/55 text-sm leading-relaxed mt-2">
+                Salesforce Consultant · Salesforce Administrator · Salesforce
+                Business Analyst · Salesforce Developer · Salesforce Engineer
               </p>
             </div>
           </div>
