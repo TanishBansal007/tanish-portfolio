@@ -87,7 +87,7 @@ export default function Contact() {
             />
 
             <span className="text-white text-sm md:text-base">
-              Jersey City, New Jersey · Open to Relocate
+              New Jersey, USA · Open to Relocate
             </span>
           </div>
 
