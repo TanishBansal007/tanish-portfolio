@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 
-const RESUME_URL = '/files/Tanish_Bansal_Salesforce_Administrator.docx';
+const RESUME_URL = '/files/Tanish_Bansal_Salesforce_Engineer.docx';
 
 const HERO_PHOTO = '/images/Agentforce-World-Tour-Photo-1.jpeg';
 

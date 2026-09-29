@@ -8,7 +8,7 @@ import {
   BriefcaseBusiness,
 } from 'lucide-react';
 
-const RESUME_URL = '/files/Tanish_Bansal_Salesforce_Administrator.docx';
+const RESUME_URL = '/files/Tanish_Bansal_Salesforce_Engineer.docx';
 
 export default function Contact() {
   return (
