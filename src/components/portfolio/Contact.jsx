@@ -87,7 +87,7 @@ export default function Contact() {
             />
 
             <span className="text-white text-sm md:text-base">
-              New Jersey, USA · Open to Relocate
+               USA · Open to Relocate
             </span>
           </div>
 
